@@ -65,11 +65,11 @@ pipeline {
                     
                     # Publish the package using the configured Artifactory repository
                     echo "Publishing to Artifactory..."
-                    jf rt yarn publish --repo=$REPO_NAME
+                    jf  yarn publish --repo=$REPO_NAME
                     
                     // You can optionally continue with build info steps if needed
-                    // jf rt bce my-build 1
-                    // jf rt bp my-build 1
+                     jf rt bce my-build 1
+                      jf rt bp my-build 1
                     """
                 }
             }
