@@ -61,6 +61,7 @@ pipeline {
                     sh """
                     # Configure JFrog CLI with Artifactory details
                     echo "Configuring JFrog CLI..."
+                    jf c rm my-jfrog-server 
                     jf c add my-jfrog-server --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USERNAME --password=$ARTIFACTORY_PASSWORD --interactive=false --insecure-tls=true
                     
                     # Publish the package using the configured Artifactory repository
