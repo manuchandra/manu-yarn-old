@@ -55,6 +55,7 @@ pipeline {
                     dir('/var/jenkins_home/workspace/manu-yarn-old') {
                         // Configure JFrog CLI
                         sh """
+                        jf yarn add --dev lerna
                         jf yarn lerna version -y --conventional-commits
                         jf c add --insecure-tls true --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --password $ARTIFACTORY_PASSWORD --interactive=false
                         jf yarn-config --repo-resolve $REPO_NAME
