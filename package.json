@@ -8,11 +8,11 @@
     "json": "9.0.6",
     "minimist": "1.2.5",
     "tough-cookie": "2.5.0",
-    "lerna": "^6.0.0"  // add the appropriate version of Lerna here
+    "lerna": "^6.0.0"
   },
-  "devDependencies": {}, // you can also put Lerna in devDependencies
+  "devDependencies": {},
   "scripts": {
-    "lerna": "lerna"  // Add this script
+    "lerna": "lerna"
   },
   "packageManager": "yarn@3.6.3"
 }
