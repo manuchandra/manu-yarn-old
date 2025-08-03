@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        jfrog 'jfrog'  
+        jfrog 'jfrog-cli-2.78.1'  
         nodejs 'np'
     }
     environment {
