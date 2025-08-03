@@ -42,7 +42,7 @@ pipeline {
                     
                     # Install dependencies using the node-modules linker
                     echo "Installing dependencies with 'yarn install'..."
-                    yarn install
+                    #yarn install
                     '''
                 }
             }
@@ -51,7 +51,7 @@ pipeline {
             steps {
                 dir('/var/jenkins_home/workspace/manu-yarn-old') {
                     // This assumes your project has a 'build' script in package.json
-                    sh 'yarn build'
+                   // sh 'yarn build'
                 }
             }
         }
