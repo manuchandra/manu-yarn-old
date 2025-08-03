@@ -21,8 +21,8 @@ pipeline {
                     dir('/var/jenkins_home/workspace/manu-yarn-old') {
                         // Install Yarn globally and then install dependencies
                         sh 'rm -rf node_modules yarn.lock' 
-                        sh 'npm install -g npm@latest'
-                        sh 'npm install -g yarn@latest'
+                       // sh 'npm install -g npm@latest'
+                        sh 'npm install -g yarn'
                         sh 'yarn cache clean' 
                         sh 'yarn --version'
                         sh 'export YARN_VERBOSE=1'
