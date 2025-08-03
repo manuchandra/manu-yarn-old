@@ -1,29 +1,17 @@
 {
-  "name": "manu-yarn",
+  "name": "my-project",
   "version": "1.0.0",
-  "description": "A sample project using Yarn and JFrog CLI",
+  "private": true,
+  "description": "A basic project using Yarn",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Building the project...'",
-    "test": "echo 'Running tests...'" 
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "YourName",
-  "license": "MIT",
   "dependencies": {
-    "jquery": "^3.6.0" 
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "lerna": "^6.6.0",
-    "typescript": "^5.9.2", 
-    "@nrwl/devkit": "^16.0.0" 
-  },
-  "peerDependencies": {
-    
-    "nx": "^15.0.0" 
-  },
-  "resolutions": {
-   
-    "typescript": "^5.9.2"
+    "jest": "^27.0.6"
   }
 }
