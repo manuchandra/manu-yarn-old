@@ -38,7 +38,7 @@ pipeline {
                 script {
                     // Change to the directory containing package.json
                     dir('/var/jenkins_home/workspace/manu-yarn-old') {
-                       sh 'yarn build' // Replace with your build command if necessary
+                       sh 'yarn run' // Replace with your build command if necessary
                     }
                 }
             }
