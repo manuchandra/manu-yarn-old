@@ -45,7 +45,7 @@ pipeline {
                 script {
                     // Change to the directory containing package.json
                     dir(TARGET_DIRECTORY) {
-                        sh 'yarn build' // Replace with your build command if necessary
+                       // sh 'yarn build' // Replace with your build command if necessary
                     }
                 }
             }
