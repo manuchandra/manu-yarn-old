@@ -25,7 +25,8 @@ pipeline {
                         sh 'npm install -g yarn@^2.4.0'
                         sh 'yarn cache clean' 
                         sh 'yarn --version'
-                        sh 'yarn install --verbose'
+                        sh 'yarn config set logLevel verbose'
+                        sh 'yarn install'
                     }
                 }
             }
