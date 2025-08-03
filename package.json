@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "manu-yarn",
   "version": "1.0.0",
   "description": "A sample project using Yarn and JFrog CLI",
   "main": "index.js",
