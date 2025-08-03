@@ -75,3 +75,4 @@ pipeline {
             echo 'Build or publish to Artifactory failed. 😞'
         }
     }
+}
