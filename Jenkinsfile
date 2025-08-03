@@ -10,27 +10,15 @@ pipeline {
         ARTIFACTORY_USERNAME = 'manu' // Correct credentials ID for username
         ARTIFACTORY_PASSWORD = 'Password@123' // Correct credentials ID for password
         PACKAGE_NAME = 'jquery' // Replace with your package name
-        TARGET_REPO_URL = 'https://github.com/manuchandra/manu-yarn-old.git' // URL to your specific repo
-        TARGET_DIRECTORY = 'manu-yarn-old' // directory where package.json is located
+        //TARGET_REPO_URL = 'https://github.com/manuchandra/manu-yarn-old.git' // URL to your specific repo
+        //TARGET_DIRECTORY = 'manu-yarn-old' // directory where package.json is located
     }
     stages {
-        stage('Clone Repository') {
-            steps {
-                script {
-                    // Remove the existing directory if it exists
-            if (fileExists('manu-yarn-old')) {
-                sh 'rm -rf manu-yarn-old' // Warning: This deletes the directory!
-            }
-                    // Clone the specific repository
-                    sh "git clone ${TARGET_REPO_URL}"
-                }
-            }
-        }
-        stage('Install Dependencies') {
+        stage('Setup Environment and Dependencies') {
             steps {
                 script {
                     // Change to the directory containing package.json
-                    dir(TARGET_DIRECTORY) {
+                    dir('/var/jenkins_home/workspace/manu-yarn-old') {
                         // Install Yarn globally and then install dependencies
                         sh 'npm install -g npm@latest'
                         sh 'npm install -g yarn@^2.4.0'
@@ -44,7 +32,7 @@ pipeline {
             steps {
                 script {
                     // Change to the directory containing package.json
-                    dir(TARGET_DIRECTORY) {
+                    dir('/var/jenkins_home/workspace/manu-yarn-old') {
                        // sh 'yarn build' // Replace with your build command if necessary
                     }
                 }
@@ -65,7 +53,7 @@ pipeline {
             steps {
                 script {
                     // Change to the directory containing package.json
-                    dir(TARGET_DIRECTORY) {
+                    dir('/var/jenkins_home/workspace/manu-yarn-old') {
                         // Configure JFrog CLI
                         sh """
                         jf c add --insecure-tls true --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --password $ARTIFACTORY_PASSWORD --interactive=false
