@@ -9,9 +9,6 @@ pipeline {
         REPO_NAME = 'manu-yarn-npm'
         ARTIFACTORY_USERNAME = 'manu' // Correct credentials ID for username
         ARTIFACTORY_PASSWORD = 'Password@123' // Correct credentials ID for password
-        //PACKAGE_NAME = 'jquery' // Replace with your package name
-        //TARGET_REPO_URL = 'https://github.com/manuchandra/manu-yarn-old.git' // URL to your specific repo
-        //TARGET_DIRECTORY = 'manu-yarn-old' // directory where package.json is located
     }
     stages {
         stage('Setup Environment and Dependencies') {
@@ -20,14 +17,11 @@ pipeline {
                     // Change to the directory containing package.json
                     dir('/var/jenkins_home/workspace/manu-yarn-old') {
                         // Install Yarn globally and then install dependencies
-                        sh 'rm -rf node_modules yarn.lock' 
                        // sh 'npm install -g npm@latest'
-                        sh 'npm view yarn version'
                         sh 'npm cache clean --force'
                         sh 'npm install -g yarn@^2.4.0'
                         sh 'yarn cache clean' 
                         sh 'yarn --version'
-                        sh 'export YARN_VERBOSE=1'
                         sh 'yarn install'
                     }
                 }
