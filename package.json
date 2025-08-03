@@ -4,26 +4,26 @@
   "description": "A sample project using Yarn and JFrog CLI",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Building the project...'", // Replace with your actual build command
-    "test": "echo 'Running tests...'" // Replace with your actual test command
+    "build": "echo 'Building the project...'",
+    "test": "echo 'Running tests...'" 
   },
   "keywords": [],
   "author": "YourName",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.6.0" // Adjust version based on your requirements
+    "jquery": "^3.6.0" 
   },
   "devDependencies": {
     "lerna": "^6.6.0",
-    "typescript": "^5.9.2", // Make sure this aligns with your project’s TypeScript version
-    "@nrwl/devkit": "^16.0.0" // Example of a peer dependency you might need
+    "typescript": "^5.9.2", 
+    "@nrwl/devkit": "^16.0.0" 
   },
   "peerDependencies": {
-    // List any peer dependencies that are required by your project
-    "nx": "^15.0.0" // Modify as required based on the actual peer-dependencies conflict
+    
+    "nx": "^15.0.0" 
   },
   "resolutions": {
-    // A way to enforce specific versions of dependencies
+   
     "typescript": "^5.9.2"
   }
 }
