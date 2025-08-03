@@ -60,7 +60,7 @@ pipeline {
                         sh """
                         jf c add --insecure-tls true --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --password $ARTIFACTORY_PASSWORD --interactive=false
                         jf yarn-config --repo-resolve $REPO_NAME
-                        jf yarn install --build-name=my-build --build-number=1 
+                        JFROG_CLI_LOG_LEVEL=DEBUG  jf yarn install --build-name=my-build --build-number=1 
                         jf rt bce my-build 1
                         jf rt bp my-build 1
                         """
