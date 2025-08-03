@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
         ARTIFACTORY_URL = 'https://hts2.jfrog.io'
-        REPO_NAME = 'manu-npm'
+        REPO_NAME = 'manu-yarn-npm'
         ARTIFACTORY_USERNAME = 'manu' // Correct credentials ID for username
         ARTIFACTORY_PASSWORD = 'Password@123' // Correct credentials ID for password
         PACKAGE_NAME = 'jquery' // Replace with your package name
