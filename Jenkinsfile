@@ -24,7 +24,7 @@ pipeline {
                        // sh 'npm install -g npm@latest'
                         sh 'npm view yarn version'
                         sh 'npm cache clean --force'
-                        sh 'npm install -g yarn@^4.9.2'
+                        sh 'npm install -g yarn@^2.4.0'
                         sh 'yarn cache clean' 
                         sh 'yarn --version'
                         sh 'export YARN_VERBOSE=1'
