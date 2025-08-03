@@ -1,4 +1,3 @@
-Yarn installing script
 pipeline {
     agent any
     tools {
