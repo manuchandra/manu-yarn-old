@@ -1,17 +1,13 @@
 {
-  "name": "my-project",
+  "name": "yarn-berry",
   "version": "1.0.0",
-  "private": true,
-  "description": "A basic project using Yarn",
+  "description": "yarn berry example project",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "json": "9.0.6",
+    "minimist": "1.2.5",
+    "tough-cookie": "2.5.0"
   },
-  "devDependencies": {
-    "jest": "^27.0.6"
-  }
+  "packageManager": "yarn@3.6.3"
 }
