@@ -22,7 +22,7 @@ pipeline {
                         // Install Yarn globally and then install dependencies
                         sh 'rm -rf node_modules yarn.lock' 
                        // sh 'npm install -g npm@latest'
-                        sh 'npm install -g yarn'
+                        sh 'npm install -g yarn@3.6.0'
                         sh 'yarn cache clean' 
                         sh 'yarn --version'
                         sh 'export YARN_VERBOSE=1'
