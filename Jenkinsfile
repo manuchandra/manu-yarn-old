@@ -20,10 +20,12 @@ pipeline {
                     // Change to the directory containing package.json
                     dir('/var/jenkins_home/workspace/manu-yarn-old') {
                         // Install Yarn globally and then install dependencies
+                        sh 'rm -rf node_modules yarn.lock' 
                         sh 'npm install -g npm@latest'
                         sh 'npm install -g yarn@^2.4.0'
+                        sh 'yarn cache clean' 
                         sh 'yarn --version'
-                        //sh 'yarn install'
+                        sh 'yarn install'
                     }
                 }
             }
@@ -33,7 +35,7 @@ pipeline {
                 script {
                     // Change to the directory containing package.json
                     dir('/var/jenkins_home/workspace/manu-yarn-old') {
-                       // sh 'yarn build' // Replace with your build command if necessary
+                       sh 'yarn build' // Replace with your build command if necessary
                     }
                 }
             }
