@@ -9,7 +9,7 @@ pipeline {
         REPO_NAME = 'manu-yarn-npm'
         ARTIFACTORY_USERNAME = 'manu' // Correct credentials ID for username
         ARTIFACTORY_PASSWORD = 'Password@123' // Correct credentials ID for password
-        PACKAGE_NAME = 'jquery' // Replace with your package name
+        //PACKAGE_NAME = 'jquery' // Replace with your package name
         //TARGET_REPO_URL = 'https://github.com/manuchandra/manu-yarn-old.git' // URL to your specific repo
         //TARGET_DIRECTORY = 'manu-yarn-old' // directory where package.json is located
     }
