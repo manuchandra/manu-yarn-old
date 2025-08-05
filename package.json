@@ -7,12 +7,7 @@
   "dependencies": {
     "json": "9.0.6",
     "minimist": "1.2.5",
-    "tough-cookie": "2.5.0",
-    "lerna": "^6.0.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "lerna": "lerna"
+    "tough-cookie": "2.5.0"
   },
   "packageManager": "yarn@4.9.2"
 }
