@@ -19,7 +19,7 @@ pipeline {
                         // Install Yarn globally and then install dependencies
                        // sh 'npm install -g npm@latest'
                         sh 'npm cache clean --force'
-                        sh 'npm install -g yarn@4.0.2'
+                        sh 'npm install -g yarn@4.9.1'
                         sh 'yarn cache clean' 
                         sh 'yarn --version'
                         sh 'yarn install'
