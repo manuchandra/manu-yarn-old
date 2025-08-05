@@ -24,7 +24,7 @@ pipeline {
                         //sh 'npm install -g yarn@4.9.2'
                         sh 'yarn cache clean' 
                         sh 'yarn --version'
-                        sh 'yarn install'
+                        sh 'yarn install --immutable'
                     }
                 }
             }
@@ -57,8 +57,8 @@ pipeline {
                     dir('/var/jenkins_home/workspace/manu-yarn-old') {
                         // Configure JFrog CLI
                         sh """
-                        jf yarn add --dev lerna
-                        jf yarn lerna version -y --conventional-commits
+                        #jf yarn add --dev lerna
+                        #jf yarn lerna version -y --conventional-commits
                         jf c add --insecure-tls true --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --password $ARTIFACTORY_PASSWORD --interactive=false
                         jf yarn-config --repo-resolve $REPO_NAME
                         JFROG_CLI_LOG_LEVEL=DEBUG  jf yarn install --build-name=my-build --build-number=1 
