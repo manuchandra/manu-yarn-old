@@ -61,7 +61,7 @@ pipeline {
                         #jf yarn lerna version -y --conventional-commits
                         jf c add --insecure-tls true --url $ARTIFACTORY_URL --user $ARTIFACTORY_USERNAME --password $ARTIFACTORY_PASSWORD --interactive=false
                         jf yarn-config --repo-resolve $REPO_NAME
-                        JFROG_CLI_LOG_LEVEL=DEBUG  jf yarn install --build-name=my-build --build-number=1 
+                        JFROG_CLI_LOG_LEVEL=DEBUG  jf yarn install --build-name=my-build --build-number=1 --immutable
                         jf rt bce ${JOB_NAME} ${BUILD_NUMBER}
                         dd if=/dev/zero of=package.tgz bs=1M count=1
                         dd if=/dev/zero of=file.tgz bs=1M count=1
