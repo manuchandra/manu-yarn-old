@@ -19,8 +19,9 @@ pipeline {
                         // Install Yarn globally and then install dependencies
                        // sh 'npm install -g npm@latest'
                         sh 'npm cache clean --force'
-                        sh 'npm config set registry https://registry.npmjs.org/'
-                        sh 'npm install -g yarn@4.9.2'
+                        sh 'corepack enable'
+                        sh 'corepack prepare yarn@4.9.2 --activate'
+                        //sh 'npm install -g yarn@4.9.2'
                         sh 'yarn cache clean' 
                         sh 'yarn --version'
                         sh 'yarn install'
